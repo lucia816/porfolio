@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="okio-1.14.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/DAM primero/programacion/libs/okio-1.14.0.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/DAM primero/programacion/libs/okhttp-3.11.0.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/DAM primero/programacion/libs/guava-25.0-jre.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/DAM primero/programacion/libs/commons-exec-1.3.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/DAM primero/programacion/libs/byte-buddy-1.8.15.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/DAM primero/programacion/Trabajo practica.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/DAM primero/programacion/client-combined-3.141.59.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Desktop/DAM primero/programacion/client-combined-3.141.59-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
