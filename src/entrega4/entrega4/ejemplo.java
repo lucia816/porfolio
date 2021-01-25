@@ -5,11 +5,17 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 import java.util.Scanner;
 
 public class ejemplo {
-    public static void main (String[] args){
+    public static void main (String[] args) throws IOException {
+
+
 
     Scanner teclado = new Scanner(System.in);
 
@@ -26,6 +32,8 @@ public class ejemplo {
     String Busqueda = teclado.nextLine();
 
    try {
+
+
        WebElement ventanaCookies = pagina1.findElement(By.id("onetrust-banner-sdk"));
        if (ventanaCookies != null) {
            System.out.println("Detectado caja de cookies");
@@ -36,26 +44,35 @@ public class ejemplo {
            System.out.println("Detectado caja de cookies");
            ventanaCookies.click();
        }
-
    }catch (Exception e) {
    }
 
-    WebElement cajaBusqueda = pagina1.findElement(By.xpath("/html/body/header/div[3]/div[1]/div/div[2]/div/form/input"));
-    cajaBusqueda.sendKeys(Busqueda);
-    cajaBusqueda.submit();
+       WebElement cajaBusqueda = pagina1.findElement(By.xpath("/html/body/header/div[3]/div[1]/div/div[2]/div/form/input"));
+       cajaBusqueda.sendKeys(Busqueda);
+       cajaBusqueda.submit();
 
-    WebElement cajaBusqueda2 = pagina2.findElement(new By.ById("searcher"));
-    cajaBusqueda2.sendKeys(Busqueda);
-    cajaBusqueda2.submit();
+       WebElement cajaBusqueda2 = pagina2.findElement(new By.ById("searcher"));
+       cajaBusqueda2.sendKeys(Busqueda);
+       cajaBusqueda2.submit();
 
-   String resultados1 = pagina1.findElement(By.xpath("//*[@id=\"pcc-search-api--hits\"]/div[2]/ol")).getText();
-    System.out.println(resultados1);
+       String resultados1 = pagina1.findElement(By.xpath("//*[@id=\"pcc-search-api--hits\"]/div[2]/ol")).getText();
+       System.out.println(resultados1);
 
-        System.out.println("--------------------------------");
+       System.out.println("--------------------------------");
 
-    String resultados= pagina2.findElement(By.xpath("//*[@id=\"productsList1\"]")).getText();
-    System.out.println(resultados);
+       String resultados = pagina2.findElement(By.xpath("//*[@id=\"productsList1\"]")).getText();
+       System.out.println(resultados);
+        try {
+            FileWriter fichero = new FileWriter(
+                    "C:\\Users\\HP\\IdeaProjects\\Dam\\src\\entrega4\\entrega4", true);
+            PrintWriter pw = new PrintWriter(fichero);
+            pw.println("Resultados de busqueda");
+            pw.println(resultados);
+            pw.println(resultados1);
 
+        }catch (Exception e) {
+        }
+        }
     }
 
-}
+
